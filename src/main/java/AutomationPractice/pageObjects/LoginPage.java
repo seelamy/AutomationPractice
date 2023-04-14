@@ -7,7 +7,6 @@ import org.openqa.selenium.support.PageFactory;
 
 import AutomationPractice.AbstractComponents.AbstractComponents;
 
-
 public class LoginPage extends AbstractComponents {
 
 	WebDriver driver;
@@ -27,16 +26,19 @@ public class LoginPage extends AbstractComponents {
 
 	@FindBy(xpath = "//input[@name='login']")
 	WebElement submit;
-	
-	public void loginApplication(String userName,String password) {
+
+	public ProductCatalogPage loginApplication(String userName, String password) {
 		userEmail.sendKeys(userName);
 		userPassword.sendKeys(password);
 		submit.click();
+		ProductCatalogPage productCatalogPage = new ProductCatalogPage(driver);
+		return productCatalogPage;
+
 	}
-	
+
 	public void goTo() {
 		driver.get("https://rahulshettyacademy.com/client");
-	    driver.manage().window().maximize();
+		driver.manage().window().maximize();
 
 	}
 
