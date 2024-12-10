@@ -1,0 +1,8 @@
+META-INF\maven\UI-test-automation\UI-test-automation\pom.xml
+AutomationPractice\pageObjects\CartPage.class
+AutomationPractice\AbstractComponents\AbstractComponents.class
+AutomationPractice\pageObjects\CheckOutPage.class
+AutomationPractice\pageObjects\ConfirmationPage.class
+META-INF\maven\UI-test-automation\UI-test-automation\pom.properties
+AutomationPractice\pageObjects\LoginPage.class
+AutomationPractice\pageObjects\ProductCatalogPage.class
