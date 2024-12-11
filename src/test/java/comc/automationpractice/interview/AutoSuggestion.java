@@ -1,4 +1,4 @@
-package comAutomationPractice.interview;
+package comc.automationpractice.interview;
 
 import java.time.Duration;
 import java.util.List;
