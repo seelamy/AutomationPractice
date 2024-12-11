@@ -2,8 +2,11 @@ package com.java.practice;
 
 import static org.testng.Assert.assertTrue;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import org.testng.Assert;
@@ -21,9 +24,18 @@ public class Javamaps {
 		lists.stream().filter(a -> a.startsWith("A")).sorted().map(a -> a.toUpperCase())
 				.forEach(a -> System.out.println(a));
 		Stream<String> combainedlist =Stream.concat(list1, lists.stream());
-		combainedlist.forEach(a->System.out.println(a));
+//		combainedlist.forEach(a->System.out.println(a));
 		boolean b= combainedlist.anyMatch(a->a.equalsIgnoreCase("Aama"));
 		Assert.assertTrue(b);
+		
+		
+		List<Integer> list= Arrays.asList(23,2,10,3,56,21,3,23);
+		list.stream().sorted().forEach(a->System.out.println(a));
+		list.stream().distinct().forEach(a->System.out.println(a));
+		List<Integer> list12 = list.stream().sorted().distinct().collect(Collectors.toList());
+		System.out.println("afaf"+list12.get(2));
+		
+		//
 		
 
 	}
